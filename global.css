@@ -12,9 +12,8 @@ body {
   font-family: "Georgia", serif;
 }
 
-@media (max-width: 600px) {
-  .letter-text {
-    .letter-text {
+@media (max-width: 600px)
+.letter-text {
   font-size: clamp(11px, 3.2vw, 15px);
   line-height: 1.45;
 }
