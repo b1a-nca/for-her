@@ -12,16 +12,3 @@ body {
   font-family: "Georgia", serif;
 }
 
-@media (max-width: 600px)
-.letter-text {
-  font-size: clamp(11px, 3.2vw, 15px);
-  line-height: 1.45;
-}
-
-  .letter-text h1 {
-    font-size: 20px;      /* smaller title */
-    margin-bottom: 10px;
-  }
-}
-
-}
