@@ -14,10 +14,10 @@ body {
 
 @media (max-width: 600px) {
   .letter-text {
-    font-size: 13px;      /* smaller text */
-    line-height: 1.45;    /* tighter spacing */
-    width: 85%;           /* more breathing room */
-  }
+    .letter-text {
+  font-size: clamp(11px, 3.2vw, 15px);
+  line-height: 1.45;
+}
 
   .letter-text h1 {
     font-size: 20px;      /* smaller title */
