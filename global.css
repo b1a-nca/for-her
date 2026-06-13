@@ -12,17 +12,17 @@ body {
   font-family: "Georgia", serif;
 }
 
-/* 📱 Mobile text fix */
 @media (max-width: 600px) {
-
   .letter-text {
-    width: 85%;
-    font-size: 14px;      /* smaller body text */
-    line-height: 1.4;
+    font-size: 13px;      /* smaller text */
+    line-height: 1.45;    /* tighter spacing */
+    width: 85%;           /* more breathing room */
   }
 
   .letter-text h1 {
-    font-size: 22px;      /* smaller title */
+    font-size: 20px;      /* smaller title */
+    margin-bottom: 10px;
   }
+}
 
 }
