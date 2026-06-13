@@ -30,35 +30,33 @@ No fue algo planeado, ni rápido, ni fácil de aceptar… simplemente pasó.
 No te escribo esto esperando nada en específico. Solo sentía que tenía que ser honesta contigo y decirlo en voz alta, o al menos en palabras. Sea cual sea tu respuesta, gracias por ser quien eres y por todo lo que significas para mí
     </div>
 
-    <div class="choices">
-      <button class="choice act"
-        onclick="sendResponse('She wants to act on it 💖')">
-        click aqui si es reciproco
-      </button>
+<div class="choices">
 
-      <button class="choice deny"
-        onclick="sendResponse('She denied it gently 🤍')">
-        click aqui si no sientes lo mismo pero quieres seguir hablando como siempre
-      </button>
+  <!-- 📩 ACT UPON IT -->
+  <form action="https://formspree.io/f/mqeogwoj" method="POST">
+    <input type="hidden" name="response" value="Ella quiere actuar sobre esto 💖">
+    <button class="choice act" type="submit">
+       click aqui si es reciproco
+    </button>
+  </form>
 
-      <button class="choice leave"
-        onclick="sendResponse('She doesn’t want to talk anymore 💔')">
-        click aqui para no seguir hablando nunca mas (lo entiendo y lo respeto)
-      </button>
-    </div>
+  <!-- 🤍 DENY GENTLY -->
+  <form action="https://formspree.io/f/mqeogwoj" method="POST">
+    <input type="hidden" name="response" value="Ella lo niega gentilmente 🤍">
+    <button class="choice deny" type="submit">
+      click aqui si no sientes lo mismo pero quieres seguir hablando como siempre
+    </button>
+  </form>
 
+  <!-- 💔 DON’T TALK ANYMORE -->
+  <form action="https://formspree.io/f/mqeogwoj" method="POST">
+    <input type="hidden" name="response" value="Ella no quiere seguir hablando 💔">
+    <button class="choice leave" type="submit">
+      click aqui para no seguir hablando nunca mas (lo entiendo y lo respeto)
+    </button>
+
+</div>
   </div>
-
-  <script>
-    function sendResponse(message) {
-      const email = "bianca.rsandoval2604@gmail.com"; // CHANGE THIS
-      const subject = "200 days — her response";
-      const body = message;
-
-      window.location.href =
-        `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }
-  </script>
 
 <script>
   const music = document.getElementById("bgMusic");
