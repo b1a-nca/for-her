@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>200 Days</title>
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <audio id="bgMusic" loop>
+  <source src="y2mate.com - Clairo  Sofia.mp3" type="audio/mpeg">
+</audio>
+  <div class="container">
+
+    <!-- CLOSED LETTER -->
+    <img src="closedletter.jpg" class="closed-letter" id="closedLetter">
+
+    <!-- SEAL -->
+    <button class="seal" id="sealButton">Open</button>
+
+    <!-- OPEN LETTER -->
+    <img src="openletter.png" class="open-letter" id="openLetter">
+
+    <!-- TEXT -->
+    <div class="letter-text" id="letterText">
+      <h1>200 Dias!</h1>
+
+      <p>
+        No sé muy bien en qué momento pasó,
+
+pero de alguna forma ya han sido 200 días desde que nos conocemos.
+
+
+Y quería hacer algo para marcarlo, aunque sea pequeño,
+
+porque para mí no es cualquier cosa.
+
+
+Me pareces una persona increíble.
+
+De verdad.
+
+Me encanta la forma en la que ves las cosas,
+
+cómo hablas, cómo te expresas siempre, cómo simplemente eres tú.
+
+
+Aprecio mucho el tiempo que hemos compartido,
+
+las conversaciones, los momentos simples,
+
+incluso los silencios.
+
+Todo eso se me queda.
+
+
+Esto no es nada grande ni dramático,
+
+solo una manera de decirte gracias.
+
+Gracias por estar, por existir en mi vida,
+
+y por hacer que todo este tiempo signifique algo para mí.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- CONFESSION BUTTON (OUTSIDE LETTER) -->
+  <button class="confession-btn" id="confessionBtn">
+    CLICK AQUI si quieres saber algo que cambie la forma en la que me ves y nuestra relacion
+  </button>
+
+  <script>
+  const seal = document.getElementById("sealButton");
+  const closedLetter = document.getElementById("closedLetter");
+  const openLetter = document.getElementById("openLetter");
+  const letterText = document.getElementById("letterText");
+  const confessionBtn = document.getElementById("confessionBtn");
+
+  seal.addEventListener("click", () => {
+    startMusic();
+
+    closedLetter.classList.add("hidden");
+    seal.classList.add("hidden");
+
+    setTimeout(() => {
+      openLetter.classList.add("show");
+      letterText.classList.add("show");
+    }, 400);
+
+    setTimeout(() => {
+      confessionBtn.classList.add("show");
+    }, 1200);
+  });
+
+  // 🔥 THIS WAS MISSING
+  confessionBtn.addEventListener("click", () => {
+    window.location.href = "confession.html";
+  });
+</script>
+
+<script>
+  const music = document.getElementById("bgMusic");
+
+  // Resume music if user already started it
+  if (localStorage.getItem("musicPlaying") === "true") {
+    music.play().catch(() => {});
+  }
+
+  function startMusic() {
+    music.play();
+    localStorage.setItem("musicPlaying", "true");
+  }
+</script>
+</body>
+</html>

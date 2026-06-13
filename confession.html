@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Something I Never Said</title>
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="confession.css">
+</head>
+
+<body>
+<audio id="bgMusic" loop>
+  <source src="y2mate.com - Clairo  Sofia.mp3" type="audio/mpeg">
+</audio>
+  <div class="confession-container">
+
+    <div class="confession-letter">
+      <h1>Hi.</h1>
+
+      <p>
+      Quería decirte algo que llevo pensando desde hace tiempo.
+Eres una persona increíblemente cool, y no lo digo a la ligera. Me encanta cómo eres y cómo te tomas las cosas en serio cuando importan y cómo aun así sabes hacer que todo se sienta más ligero.
+Admiro muchísimo el esfuerzo que pones en todo lo que haces. Se nota que eres alguien trabajadora, constante, y que no se rinde fácil. Eso dice mucho de ti, y honestamente, me inspira.
+Aprecio de verdad todo el tiempo que hemos compartido, las conversaciones, las risas, los ratiros medios raros (lol). Conocerte ha sido algo muy bonito para mí, y quería que lo supieras
+Y bueno… aquí viene la parte difícil de escribir.
+Durante mucho tiempo intenté negar lo que sentía. Me dije que no era nada, que se me iba a pasar, que solo estaba exagerando. Pero la verdad es que no pude.
+Porque cuanto más te conozco, más claro se vuelve lo mucho que me importas.
+Me gustas por quien eres. Por tu dedicación, por tu forma de esforzarte, por cómo das lo mejor de ti incluso cuando es difícil. Me gustas porque eres auténtica, porque no finges, porque eres tú.
+No fue algo planeado, ni rápido, ni fácil de aceptar… simplemente pasó.
+No te escribo esto esperando nada en específico. Solo sentía que tenía que ser honesta contigo y decirlo en voz alta, o al menos en palabras. Sea cual sea tu respuesta, gracias por ser quien eres y por todo lo que significas para mí
+    </div>
+
+    <div class="choices">
+      <button class="choice act"
+        onclick="sendResponse('She wants to act on it 💖')">
+        click aqui si es reciproco
+      </button>
+
+      <button class="choice deny"
+        onclick="sendResponse('She denied it gently 🤍')">
+        click aqui si no sientes lo mismo pero quieres seguir hablando como siempre
+      </button>
+
+      <button class="choice leave"
+        onclick="sendResponse('She doesn’t want to talk anymore 💔')">
+        click aqui para no seguir hablando nunca mas (lo entiendo y lo respeto)
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    function sendResponse(message) {
+      const email = "bianca.rsandoval2604@gmail.com"; // CHANGE THIS
+      const subject = "200 days — her response";
+      const body = message;
+
+      window.location.href =
+        `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+  </script>
+
+<script>
+  const music = document.getElementById("bgMusic");
+
+  // Resume music if user already started it
+  if (localStorage.getItem("musicPlaying") === "true") {
+    music.play().catch(() => {});
+  }
+
+  function startMusic() {
+    music.play();
+    localStorage.setItem("musicPlaying", "true");
+  }
+</script>
+</body>
+</html>

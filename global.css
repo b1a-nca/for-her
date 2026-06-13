@@ -1,0 +1,13 @@
+html, body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  background-image: url("background.jpg");
+  background-size:cover;
+  background-position: center;   /* keeps it centered */
+  background-repeat: no-repeat;  /* no tiling */
+  background-attachment: fixed;  /* smooth scrolling */
+  font-family: "Georgia", serif;
+}
